@@ -1,7 +1,9 @@
 CC = gcc
 FLAGS = -g
-DEPS = tcp.h imap.h server.h
-OBJ = tcp.o imap.o server.o
+DEPS = tcp.h imap.h 
+OBJ = tcp.o imap.o
+
+all: swiftmail
 
 # build deps
 %.o: %.c $(DEPS)
@@ -13,4 +15,4 @@ swiftmail: $(OBJ)
 
 # wipeout objs and emacs files
 clean:
-	rm -f *.o *~
+	rm -f *.o *~ swiftmail
